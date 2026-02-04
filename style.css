@@ -1,202 +1,192 @@
 body
 {
-    margin: 0;
-    padding: 24px;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
 
+  transition: background-color 200ms linear;
 
-    transition: background-color 200ms linear;
-
-    background-color: rgb(40, 40, 40);
-    color: rgb(15, 15, 15);
+  background-color: rgb(40, 40, 40);
+  color: rgb(15, 15, 15);
 }
 
 .title
 {
-    margin: 0 0 18px 0;
-    font-size: 56px;
-    font-weight: 900;
-    letter-spacing: -1px;
+  margin: 0 0 18px 0;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1px;
 
-    color: rgba(0, 0, 0, 0.55);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .controls
 {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
 
-    margin-bottom: 14px;
-}
-
-.btn
-{
-    font-size: 16px;
-    padding: 6px 12px;
+  margin-bottom: 14px;
 }
 
 .label
 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.65);
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .select
 {
-    font-size: 16px;
-    padding: 2px 8px;
+  font-size: 16px;
+  padding: 2px 8px;
 }
 
 .hint
 {
-    margin: 6px 0 16px 0;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.40);
+  margin: 6px 0 16px 0;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.40);
 
-    line-height: 1.4; 
+  line-height: 1.4;
 }
 
 .mono
 {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
-
 
 .keyboardShell
 {
-    display: inline-block;
-    padding: 18px;
-    border-radius: 14px;
+  display: inline-block;
+  padding: 18px;
+  border-radius: 14px;
 
-    background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .keyboard
 {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 
-    padding: 18px;
-    border-radius: 14px;
+  padding: 18px;
+  border-radius: 14px;
 
-    background: rgba(255, 255, 255, 0.60);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.60);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .row
 {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .key
 {
-    width: 72px;
-    height: 72px;
+  width: 72px;
+  height: 72px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 14px;
-    font-size: 28px;
-    font-weight: 700;
+  border-radius: 14px;
+  font-size: 28px;
+  font-weight: 700;
 
-    user-select: none;
-    cursor: pointer;
+  user-select: none;
+  cursor: pointer;
 
-    border: 3px solid rgba(0, 0, 0, 0.20);
+  border: 3px solid rgba(0, 0, 0, 0.20);
 
-    transition: transform 40ms linear, box-shadow 80ms linear, background-color 80ms linear, color 80ms linear;
+  transition: transform 40ms linear, box-shadow 80ms linear, background-color 80ms linear, color 80ms linear;
 }
 
 .key.white
 {
-    background: rgba(255, 255, 255, 0.90);
-    color: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 255, 255, 0.90);
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .key.black
 {
-    background: rgba(15, 15, 15, 0.75);
-    color: rgba(255, 255, 255, 0.95);
+  background: rgba(15, 15, 15, 0.75);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .key.active
 {
-    transform: translateY(2px);
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.20) inset;
+  transform: translateY(2px);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.20) inset;
 }
 
 .key.white.active
 {
-    background: rgba(240, 240, 240, 0.95);
+  background: rgba(240, 240, 240, 0.95);
 }
 
 .key.black.active
 {
-    background: rgba(40, 40, 40, 0.85);
+  background: rgba(40, 40, 40, 0.85);
 }
-
 
 .statusBlock
 {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .statusText
 {
-    font-size: 22px;
-    font-weight: 800;
-    color: rgba(0, 0, 0, 0.60);
+  font-size: 22px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.60);
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .meterWrap
 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .meterLabel
 {
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.55);
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .meterBarOuter
 {
-    width: 220px;
-    height: 14px;
-    border-radius: 999px;
+  width: 220px;
+  height: 14px;
+  border-radius: 999px;
 
-    background: rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+  background: rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 .meterBarInner
 {
-    width: 0%;
-    height: 100%;
-    border-radius: 999px;
+  width: 0%;
+  height: 100%;
+  border-radius: 999px;
 
-    background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.65);
 }
 
 .meterNumber
 {
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.60);
-    min-width: 72px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.60);
+  min-width: 72px;
 }
