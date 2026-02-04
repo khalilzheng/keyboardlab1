@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 1 - WebAudio Keyboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1 class="title">Lab 1 - WebAudio Keyboard</h1>
+
+ 
+    <div class="controls">
+        <button id="startButton" class="btn">Start Audio</button>
+
+        <label class="label">
+            Waveform:
+            <select id="waveformSelect" class="select">
+                <option value="sine">sine</option>
+                <option value="sawtooth">sawtooth</option>
+                <option value="triangle">triangle</option>
+                <option value="square">square</option>
+            </select>
+        </label>
+
+        <label class="label">
+            Polyphony:
+            <select id="polyphonySelect" class="select">
+                <option value="1">1 voice</option>
+                <option value="2" selected>2 voices</option>
+                <option value="4">4 voices</option>
+                <option value="8">8 voices</option>
+            </select>
+        </label>
+    </div>
+
+
+    <div class="hint">
+        Use physical keys:
+        <span class="mono">Z S X D C V G B H N J M Q 2 W 3 E R 5 T 6 Y 7 U</span>
+        <span class="mono"> | Panic stop: ESC</span>
+    </div>
+
+
+    <div class="keyboardShell">
+        <div id="keyboard" class="keyboard">
+            <div class="row">
+                <div class="key white" data-key="Z" data-code="90">Z</div>
+                <div class="key black" data-key="S" data-code="83">S</div>
+                <div class="key white" data-key="X" data-code="88">X</div>
+                <div class="key black" data-key="D" data-code="68">D</div>
+                <div class="key white" data-key="C" data-code="67">C</div>
+                <div class="key white" data-key="V" data-code="86">V</div>
+                <div class="key black" data-key="G" data-code="71">G</div>
+                <div class="key white" data-key="B" data-code="66">B</div>
+                <div class="key black" data-key="H" data-code="72">H</div>
+                <div class="key white" data-key="N" data-code="78">N</div>
+                <div class="key black" data-key="J" data-code="74">J</div>
+                <div class="key white" data-key="M" data-code="77">M</div>
+            </div>
+
+ 
+            <div class="row">
+                <div class="key white" data-key="Q" data-code="81">Q</div>
+                <div class="key black" data-key="2" data-code="50">2</div>
+                <div class="key white" data-key="W" data-code="87">W</div>
+                <div class="key black" data-key="3" data-code="51">3</div>
+                <div class="key white" data-key="E" data-code="69">E</div>
+                <div class="key white" data-key="R" data-code="82">R</div>
+                <div class="key black" data-key="5" data-code="53">5</div>
+                <div class="key white" data-key="T" data-code="84">T</div>
+                <div class="key black" data-key="6" data-code="54">6</div>
+                <div class="key white" data-key="Y" data-code="89">Y</div>
+                <div class="key black" data-key="7" data-code="55">7</div>
+                <div class="key white" data-key="U" data-code="85">U</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="statusBlock">
+        <div id="statusText" class="statusText">Status: idle</div>
+
+
+        <div class="meterWrap">
+            <div class="meterLabel">Peak:</div>
+            <div class="meterBarOuter">
+                <div id="meterBarInner" class="meterBarInner"></div>
+            </div>
+            <div id="peakNumber" class="meterNumber">0.000</div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
