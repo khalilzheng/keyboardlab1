@@ -66,10 +66,7 @@ document.addEventListener('DOMContentLoaded', function ()
   setStatus('idle');
 });
 
-/**
- * Ensure audio is created and resumed. This is called on first user interaction
- * (keypress / mouse down / touch start), so it satisfies browser policies.
- */
+
 function ensureAudioReady()
 {
   initAudioIfNeeded();
@@ -117,7 +114,7 @@ function keyDown(event)
     return;
   }
 
-  // No Start Audio button: initialize/resume on first valid key press
+
   ensureAudioReady();
 
   if (!audioCtx)
